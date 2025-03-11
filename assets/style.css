@@ -42,6 +42,7 @@ main {
 }
 
 .nav-links {
+  white-space: nowrap;
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -346,6 +347,9 @@ h3 {
 }
 
 .reason {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -356,6 +360,7 @@ h3 {
 }
 
 .reason h3 {
+  margin: 0px;
   color: #2980b9;
   font-size: 1.3rem;
   margin-bottom: 10px;
@@ -393,5 +398,10 @@ footer a:hover {
 
   .about-image {
     max-width: 100%;
+  }
+
+  .nav-links
+  {
+    gap: 1em;
   }
 }
