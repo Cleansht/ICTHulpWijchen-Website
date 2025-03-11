@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  flex: 1;
+}
+
+/* Algemene container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigatie */
+.navbar {
+  background: #1c2833;
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.nav-links li a.active {
+  background: #2980b9;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 22px;
+}
+
+/* Hero-sectie */
+.hero {
+  background: linear-gradient(135deg, #1c2833, #2e4053);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Knoppen */
+.btn {
+  background: #2980b9;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #1c5a8a;
+}
+
+/* Secties */
+.section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+h3 {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-cta {
+  text-align: center;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-cta .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-cta p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.contact-cta .btn {
+  margin-top: 15px;
+}
+
+.section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Over mij */
+.about p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #2980b9;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Afbeeldingen */
+.image-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.about-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #1c2833;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.image-caption {
+  font-style: italic;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Dienstenoverzicht */
+.services-overview {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-list li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Diensten */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.service-card h3 {
+  color: #1c2833;
+  margin: 15px 0;
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #ddd;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.service-card ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.extra-services {
+  margin-top: 3rem;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Tarieven */
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pricing-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: center;
+  border: 3px solid #2980b9;
+}
+
+.pricing-card h3 {
+  margin-bottom: 1rem;
+  color: #2980b9;
+  font-size: 1.4rem;
+}
+
+.pricing-card .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1c2833;
+  margin-bottom: 1rem;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Waarom kiezen voor mij */
+.why-choose {
+  background: #f4f4f4;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.reasons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.reason {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.reason h3 {
+  color: #2980b9;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #1c2833;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #66c2ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobiele weergave */
+@media (max-width: 768px) {
+  .pricing-cards, .service-grid, .reasons-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+}
