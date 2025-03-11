@@ -9,6 +9,7 @@ html, body {
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 main {
@@ -402,6 +403,17 @@ footer a:hover {
 
   .nav-links
   {
-    gap: 1em;
+    font-size: 12px;
+    gap: 0px;
+  }
+
+  .nav-links li a
+  {
+    padding: 5px 10px;
+  }
+
+  .nav-links li a.active
+  {
+    padding: 7.5px 12.5px;
   }
 }
