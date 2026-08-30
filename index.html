@@ -1,100 +1,1497 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="TiesCT, hulp met uw computer & telefoon">
-  <meta name="keywords" content="TiesCT, ICT hulp, Ties, computerhulp, laptop, ondersteuning">
+
+  <meta name="description"
+        content="TiesCT biedt persoonlijke ICT-hulp in Wijchen en omgeving. Hulp met computers, laptops, telefoons, wifi, printers, data, software en nieuwe ICT-apparatuur.">
+
+  <meta name="keywords"
+        content="TiesCT, ICT hulp, computerhulp, laptop, telefoon, ICT ondersteuning, computer reparatie, Wijchen">
+
   <meta name="author" content="Ties Neeleman">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TiesCT - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>TiesCT - Persoonlijke ICT-hulp in Wijchen</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="assets/style.css">
+
   <script type="text/javascript" src="assets/script.js"></script>
+
+
+  <style>
+
+    /* =========================
+       HOME - TIESCT
+       ========================= */
+
+
+    /* Hero */
+
+    .home-hero {
+      position: relative;
+
+      padding: 85px 0;
+
+      background:
+        linear-gradient(
+          135deg,
+          #1c2833 0%,
+          #263b4d 100%
+        );
+
+      color: #ffffff;
+
+      overflow: hidden;
+    }
+
+    .home-hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 450px;
+      height: 450px;
+
+      right: -170px;
+      bottom: -250px;
+
+      border-radius: 50%;
+
+      background: rgba(41, 128, 185, 0.18);
+    }
+
+    .home-hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 820px;
+
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+    .home-label {
+      display: inline-block;
+
+      margin-bottom: 18px;
+      padding: 8px 16px;
+
+      background: rgba(255, 255, 255, 0.1);
+      color: #66c2ff;
+
+      border-radius: 30px;
+
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+
+    .home-hero h1 {
+      margin-bottom: 18px;
+
+      color: #ffffff;
+
+      font-size: 3.2rem;
+      line-height: 1.15;
+    }
+
+    .home-hero p {
+      max-width: 720px;
+
+      margin: 0 auto 30px;
+
+      color: #ffffff;
+
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+    }
+
+    .hero-button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 13px 23px;
+
+      background: #2980b9;
+      color: #ffffff;
+
+      border: 2px solid #2980b9;
+      border-radius: 6px;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .hero-button:hover {
+      background: #1c5a8a;
+      border-color: #1c5a8a;
+
+      transform: translateY(-2px);
+    }
+
+    .hero-button.secondary {
+      background: transparent;
+      color: #ffffff;
+
+      border-color: #ffffff;
+    }
+
+    .hero-button.secondary:hover {
+      background: #ffffff;
+      color: #1c2833;
+    }
+
+
+    /* Snelle voordelen */
+
+    .home-benefits {
+      position: relative;
+      z-index: 3;
+
+      max-width: 1000px;
+
+      margin: -32px auto 0;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      background: #ffffff;
+
+      border-radius: 14px;
+
+      box-shadow:
+        0 10px 25px rgba(28, 40, 51, 0.12);
+
+      overflow: hidden;
+    }
+
+    .home-benefit {
+      padding: 26px 22px;
+
+      display: flex;
+      align-items: center;
+
+      gap: 14px;
+
+      border-right: 1px solid #e5e8eb;
+    }
+
+    .home-benefit:last-child {
+      border-right: none;
+    }
+
+    .home-benefit-icon {
+      min-width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 50%;
+    }
+
+    .home-benefit-icon ion-icon {
+      font-size: 24px;
+    }
+
+    .home-benefit strong {
+      display: block;
+
+      margin-bottom: 3px;
+
+      color: #1c2833;
+
+      font-size: 1rem;
+    }
+
+    .home-benefit span {
+      color: #666;
+
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+
+
+    /* Algemene secties */
+
+    .home-section {
+      padding: 75px 0;
+    }
+
+    .home-section.light {
+      background: #f4f4f4;
+    }
+
+    .home-section-header {
+      max-width: 760px;
+
+      margin: 0 auto 40px;
+
+      text-align: center;
+    }
+
+    .home-section-label {
+      display: inline-block;
+
+      margin-bottom: 14px;
+      padding: 7px 15px;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 30px;
+
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+    }
+
+    .home-section.light .home-section-label {
+      background: #ffffff;
+    }
+
+    .home-section-header h2 {
+      display: block;
+
+      margin: 0 0 14px;
+
+      color: #1c2833;
+
+      font-size: 2.3rem;
+    }
+
+    .home-section-header p {
+      max-width: 700px;
+
+      margin: 0 auto;
+
+      color: #555;
+
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+
+    /* Diensten */
+
+    .home-services-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 24px;
+
+      max-width: 1100px;
+
+      margin: 0 auto;
+    }
+
+    .home-service-card {
+      padding: 30px 26px;
+
+      background: #ffffff;
+
+      border: 2px solid #e4e9ed;
+      border-radius: 14px;
+
+      text-align: center;
+
+      box-shadow:
+        0 5px 15px rgba(28, 40, 51, 0.06);
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .home-service-card:hover {
+      transform: translateY(-5px);
+
+      border-color: #2980b9;
+
+      box-shadow:
+        0 12px 25px rgba(28, 40, 51, 0.11);
+    }
+
+    .home-service-icon {
+      width: 62px;
+      height: 62px;
+
+      margin: 0 auto 17px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 50%;
+    }
+
+    .home-service-icon ion-icon {
+      font-size: 30px;
+    }
+
+    .home-service-card h3 {
+      display: block;
+
+      margin: 0 0 10px;
+
+      color: #1c2833;
+
+      font-size: 1.2rem;
+    }
+
+    .home-service-card p {
+      margin: 0;
+
+      color: #555;
+
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .services-button-container {
+      margin-top: 35px;
+
+      text-align: center;
+    }
+
+
+    /* Apparatuur */
+
+    .equipment-box {
+      max-width: 1050px;
+
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: 90px 1fr;
+
+      gap: 28px;
+
+      align-items: center;
+
+      padding: 40px;
+
+      background: #1c2833;
+      color: #ffffff;
+
+      border-radius: 16px;
+
+      box-shadow:
+        0 10px 25px rgba(28, 40, 51, 0.15);
+    }
+
+    .equipment-icon {
+      width: 82px;
+      height: 82px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #2980b9;
+
+      border-radius: 50%;
+    }
+
+    .equipment-icon ion-icon {
+      color: #ffffff;
+
+      font-size: 40px;
+    }
+
+    .equipment-content h2 {
+      display: block;
+
+      margin: 0 0 12px;
+
+      color: #ffffff;
+
+      font-size: 1.7rem;
+    }
+
+    .equipment-content p {
+      max-width: 780px;
+
+      margin: 0 0 20px;
+
+      color: #ffffff;
+
+      font-size: 1.03rem;
+      line-height: 1.7;
+    }
+
+    .equipment-points {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px 20px;
+
+      margin-bottom: 22px;
+    }
+
+    .equipment-points span {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 6px;
+
+      font-size: 0.92rem;
+    }
+
+    .equipment-points ion-icon {
+      color: #66c2ff;
+
+      font-size: 18px;
+    }
+
+
+    /* Waarom TiesCT */
+
+    .why-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 24px;
+
+      max-width: 1050px;
+
+      margin: 0 auto;
+    }
+
+    .why-card {
+      padding: 30px 26px;
+
+      background: #ffffff;
+
+      border-radius: 14px;
+
+      text-align: center;
+
+      box-shadow:
+        0 5px 15px rgba(28, 40, 51, 0.07);
+    }
+
+    .why-icon {
+      width: 58px;
+      height: 58px;
+
+      margin: 0 auto 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 50%;
+    }
+
+    .why-icon ion-icon {
+      font-size: 28px;
+    }
+
+    .why-card h3 {
+      display: block;
+
+      margin: 0 0 10px;
+
+      color: #1c2833;
+
+      font-size: 1.18rem;
+    }
+
+    .why-card p {
+      margin: 0;
+
+      color: #555;
+
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+
+    /* Reviews teaser */
+
+    .home-review-box {
+      max-width: 950px;
+
+      margin: 0 auto;
+
+      padding: 38px 32px;
+
+      border: 2px solid #e4e9ed;
+      border-radius: 14px;
+
+      text-align: center;
+
+      background: #ffffff;
+    }
+
+    .home-review-box > ion-icon {
+      margin-bottom: 10px;
+
+      color: #2980b9;
+
+      font-size: 38px;
+    }
+
+    .home-review-box h2 {
+      display: block;
+
+      margin: 0 0 12px;
+
+      color: #1c2833;
+
+      font-size: 1.55rem;
+    }
+
+    .home-review-box p {
+      max-width: 700px;
+
+      margin: 0 auto 23px;
+
+      color: #555;
+
+      font-size: 1.03rem;
+      line-height: 1.65;
+    }
+
+
+    /* CTA */
+
+    .home-cta {
+      padding: 65px 0;
+
+      background: #1c2833;
+
+      text-align: center;
+    }
+
+    .home-cta h2 {
+      display: block;
+
+      margin: 0 0 12px;
+
+      color: #ffffff;
+
+      font-size: 2rem;
+    }
+
+    .home-cta p {
+      max-width: 650px;
+
+      margin: 0 auto 25px;
+
+      color: #ffffff;
+
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .home-cta-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+    }
+
+
+    /* Footer */
+
+    footer a.footer-contact {
+      color: #ffffff;
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    footer a.footer-contact:hover {
+      text-decoration: underline;
+    }
+
+
+    /* Tablet */
+
+    @media screen and (max-width: 900px) {
+
+      .home-services-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+      }
+
+      .home-benefits {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+        margin-top: 25px;
+      }
+
+      .home-benefit {
+        border-right: none;
+        border-bottom: 1px solid #e5e8eb;
+      }
+
+      .home-benefit:last-child {
+        border-bottom: none;
+      }
+
+      .equipment-box {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+      }
+
+      .equipment-icon {
+        margin: 0 auto;
+      }
+
+      .equipment-points {
+        justify-content: center;
+      }
+
+    }
+
+
+    /* Mobiel */
+
+    @media screen and (max-width: 576px) {
+
+      .home-hero {
+        padding: 60px 18px;
+      }
+
+      .home-hero h1 {
+        font-size: 2.35rem;
+      }
+
+      .home-hero p {
+        font-size: 1.05rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-button {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .home-benefits {
+        margin-left: 18px;
+        margin-right: 18px;
+      }
+
+      .home-section {
+        padding: 55px 18px;
+      }
+
+      .home-section-header h2 {
+        font-size: 2rem;
+      }
+
+      .equipment-box {
+        padding: 30px 22px;
+      }
+
+      .equipment-points {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .home-cta {
+        padding: 50px 18px;
+      }
+
+      .home-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .home-cta .hero-button {
+        width: 100%;
+        max-width: 280px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
+
+
+  <!-- Navigatie -->
+
   <header>
+
     <nav class="navbar">
+
       <div class="container">
+
         <div id="top">
+
           <div id="icons">
-            <ion-icon name="menu-outline" id="menu"></ion-icon>
-            <ion-icon name="close-outline" id="close" class="hidden"></ion-icon>
+
+            <ion-icon
+              name="menu-outline"
+              id="menu">
+            </ion-icon>
+
+            <ion-icon
+              name="close-outline"
+              id="close"
+              class="hidden">
+            </ion-icon>
+
           </div>
-          <a href="." class="logo">TiesCT</a>
+
+
+          <a href="." class="logo">
+            TiesCT
+          </a>
+
         </div>
+
+
         <ul class="nav-links">
-            <li><a href="." class="active">Home</a></li>
-          <li><a href="about">Over Mij</a></li>
-          <li><a href="services">Diensten</a></li>
-          <li><a href="pricing">Tarieven</a></li>
-          <li><a href="contact">Contact</a></li>
-          <li><a href="reviews">Reviews</a></li>
+
+          <li>
+            <a href="." class="active">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="about">
+              Over mij
+            </a>
+          </li>
+
+          <li>
+            <a href="services">
+              Diensten
+            </a>
+          </li>
+
+          <li>
+            <a href="pricing">
+              Tarieven
+            </a>
+          </li>
+
+          <li>
+            <a href="contact">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a href="reviews">
+              Reviews
+            </a>
+          </li>
+
         </ul>
+
       </div>
+
     </nav>
+
   </header>
-  <section id="home" class="hero">
-    <div class="container">
-      <h1>Welkom, ik ben Ties!</h1>
-      <p>Persoonlijke en toegankelijke ICT-ondersteuning voor al uw technische vragen.</p>
-      <a href="contact" class="btn">Stel uw vraag</a>
-    </div>
-  </section>
 
-  <section class="services-overview">
-    <div class="container">
-      <h2>Waar kan ik u mee helpen?</h2>
-      <ul class="services-list">
-        <li>✔ Computer en laptop: versnellen, opschonen en herinstallatie.</li>
-        <li>✔ Netwerk en WiFi: verbindingen instellen en beveiligen.</li>
-        <li>✔ Telefoon en tablet: gegevens overzetten en instellen.</li>
-        <li>✔ E-mailproblemen: accounts instellen en problemen oplossen.</li>
-        <li>✔ Dataherstel en back-ups: verloren bestanden terughalen.</li>
-        <li>✔ Andere hulp? Neem gerust contact op!</li>
-      </ul>
-      <a href="services" class="btn">Bekijk alle diensten</a>
-    </div>
-  </section>
 
-  <section class="why-choose">
-    <div class="container">
-      <h2>Waarom kiezen voor TiesCT?</h2>
-      <div class="reasons-grid">
-        <div class="reason">
-          <h3>✔ Persoonlijke service</h3>
-          <p>Geen standaardoplossingen, maar een aanpak die past bij uw situatie.</p>
+
+  <main>
+
+
+    <!-- Hero -->
+
+    <section
+      id="home"
+      class="home-hero">
+
+      <div class="container">
+
+        <div class="home-hero-content">
+
+          <span class="home-label">
+            PERSOONLIJKE ICT-HULP
+          </span>
+
+          <h1>
+            ICT-hulp zonder ingewikkeld gedoe
+          </h1>
+
+          <p>
+            Hulp nodig met uw computer, laptop, telefoon, wifi
+            of andere ICT-apparatuur?
+            Bij TiesCT krijgt u persoonlijke hulp, duidelijke uitleg
+            en een oplossing die past bij uw situatie.
+          </p>
+
+
+          <div class="hero-buttons">
+
+            <a
+              href="contact"
+              class="hero-button">
+
+              <ion-icon name="chatbubble-outline"></ion-icon>
+
+              Stel uw vraag
+
+            </a>
+
+
+            <a
+              href="services"
+              class="hero-button secondary">
+
+              <ion-icon name="grid-outline"></ion-icon>
+
+              Bekijk diensten
+
+            </a>
+
+          </div>
+
         </div>
-        <div class="reason">
-          <h3>✔ Betaalbaar</h3>
-          <p>Transparante tarieven zonder verrassingen achteraf.</p>
-        </div>
-        <div class="reason">
-          <h3>✔ Ervaren & Betrouwbaar</h3>
-          <p>Meer dan 5 jaar ervaring in ICT-hulp en technische ondersteuning.</p>
-        </div>
+
       </div>
-    </div>
-  </section>
 
-  <section class="contact-cta">
+    </section>
+
+
+
+    <!-- Snelle voordelen -->
+
     <div class="container">
-      <h2>Hulp nodig? Neem contact op!</h2>
-      <p>Heeft u een vraag of wilt u direct een afspraak maken? Stuur me een bericht en ik help u graag verder.</p>
-      <a href="contact" class="btn">Neem contact op</a>
+
+      <div class="home-benefits">
+
+
+        <div class="home-benefit">
+
+          <div class="home-benefit-icon">
+            <ion-icon name="person-outline"></ion-icon>
+          </div>
+
+          <div>
+
+            <strong>
+              Persoonlijke service
+            </strong>
+
+            <span>
+              Eén vast aanspreekpunt voor uw ICT
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="home-benefit">
+
+          <div class="home-benefit-icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </div>
+
+          <div>
+
+            <strong>
+              Aan huis of op afstand
+            </strong>
+
+            <span>
+              Hulp op de manier die het beste past
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="home-benefit">
+
+          <div class="home-benefit-icon">
+            <ion-icon name="receipt-outline"></ion-icon>
+          </div>
+
+          <div>
+
+            <strong>
+              Duidelijke tarieven
+            </strong>
+
+            <span>
+              Vooraf weten waar u aan toe bent
+            </span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
     </div>
-  </section>
+
+
+
+    <!-- Diensten -->
+
+    <section class="home-section">
+
+      <div class="container">
+
+
+        <div class="home-section-header">
+
+          <span class="home-section-label">
+            ICT-HULP
+          </span>
+
+          <h2>
+            Waar kan ik u mee helpen?
+          </h2>
+
+          <p>
+            Van een klein probleem tot het volledig instellen
+            van nieuwe apparatuur. Dit zijn enkele veelvoorkomende
+            werkzaamheden waarmee u bij TiesCT terechtkunt.
+          </p>
+
+        </div>
+
+
+
+        <div class="home-services-grid">
+
+
+          <div class="home-service-card">
+
+            <div class="home-service-icon">
+              <ion-icon name="desktop-outline"></ion-icon>
+            </div>
+
+            <h3>
+              Computer & laptop
+            </h3>
+
+            <p>
+              Installeren, opschonen, versnellen,
+              onderhouden en problemen oplossen.
+            </p>
+
+          </div>
+
+
+
+          <div class="home-service-card">
+
+            <div class="home-service-icon">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <h3>
+              Telefoon & tablet
+            </h3>
+
+            <p>
+              Instellen, gegevens overzetten en hulp
+              bij accounts, apps en problemen.
+            </p>
+
+          </div>
+
+
+
+          <div class="home-service-card">
+
+            <div class="home-service-icon">
+              <ion-icon name="wifi-outline"></ion-icon>
+            </div>
+
+            <h3>
+              Netwerk & wifi
+            </h3>
+
+            <p>
+              Verbindingen instellen, apparaten verbinden
+              en wifi-problemen oplossen.
+            </p>
+
+          </div>
+
+
+
+          <div class="home-service-card">
+
+            <div class="home-service-icon">
+              <ion-icon name="print-outline"></ion-icon>
+            </div>
+
+            <h3>
+              Printer & scanner
+            </h3>
+
+            <p>
+              Aansluiten, installeren, verbinden
+              en storingen oplossen.
+            </p>
+
+          </div>
+
+
+
+          <div class="home-service-card">
+
+            <div class="home-service-icon">
+              <ion-icon name="folder-open-outline"></ion-icon>
+            </div>
+
+            <h3>
+              Data & back-up
+            </h3>
+
+            <p>
+              Gegevens overzetten, back-ups instellen
+              en waar mogelijk bestanden herstellen.
+            </p>
+
+          </div>
+
+
+
+          <div class="home-service-card">
+
+            <div class="home-service-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <h3>
+              E-mail & software
+            </h3>
+
+            <p>
+              Accounts instellen, software installeren
+              en technische problemen oplossen.
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="services-button-container">
+
+          <a
+            href="services"
+            class="btn">
+
+            Bekijk alle diensten
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Nieuwe apparatuur -->
+
+    <section class="home-section light">
+
+      <div class="container">
+
+
+        <div class="equipment-box">
+
+
+          <div class="equipment-icon">
+
+            <ion-icon name="laptop-outline"></ion-icon>
+
+          </div>
+
+
+          <div class="equipment-content">
+
+            <h2>
+              Nieuwe laptop, computer of telefoon nodig?
+            </h2>
+
+            <p>
+              Ook voor nieuwe ICT-apparatuur kunt u bij TiesCT terecht.
+              Ik help u bij het kiezen van een geschikt apparaat
+              en kan vervolgens het volledige traject verzorgen:
+              van bestelling en installatie tot het overzetten van uw gegevens
+              en persoonlijke uitleg.
+            </p>
+
+
+            <div class="equipment-points">
+
+              <span>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                Persoonlijk advies
+              </span>
+
+              <span>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                Levering via TiesCT
+              </span>
+
+              <span>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                Volledig ingesteld
+              </span>
+
+              <span>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                Gegevens overgezet
+              </span>
+
+            </div>
+
+
+            <a
+              href="services"
+              class="hero-button">
+
+              Bekijk de mogelijkheden
+
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Waarom TiesCT -->
+
+    <section class="home-section">
+
+      <div class="container">
+
+
+        <div class="home-section-header">
+
+          <span class="home-section-label">
+            WAAROM TIESCT?
+          </span>
+
+          <h2>
+            Persoonlijke hulp met aandacht
+          </h2>
+
+          <p>
+            Geen onnodig ingewikkelde technische verhalen,
+            maar rustig kijken naar wat er nodig is
+            en samen tot een passende oplossing komen.
+          </p>
+
+        </div>
+
+
+
+        <div class="why-grid">
+
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              <ion-icon name="chatbubbles-outline"></ion-icon>
+            </div>
+
+            <h3>
+              Duidelijke uitleg
+            </h3>
+
+            <p>
+              Technische zaken worden op een rustige
+              en begrijpelijke manier uitgelegd.
+            </p>
+
+          </div>
+
+
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </div>
+
+            <h3>
+              Persoonlijk contact
+            </h3>
+
+            <p>
+              Geen callcenter, maar rechtstreeks contact
+              met degene die u daadwerkelijk helpt.
+            </p>
+
+          </div>
+
+
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              <ion-icon name="checkmark-circle-outline"></ion-icon>
+            </div>
+
+            <h3>
+              Ervaring & betrouwbaarheid
+            </h3>
+
+            <p>
+              Meer dan 5 jaar ervaring met ICT-hulp,
+              technische ondersteuning en apparatuur.
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Reviews -->
+
+    <section class="home-section light">
+
+      <div class="container">
+
+
+        <div class="home-review-box">
+
+          <ion-icon name="star-outline"></ion-icon>
+
+          <h2>
+            Ervaringen van klanten
+          </h2>
+
+          <p>
+            Benieuwd hoe andere klanten de hulp van TiesCT hebben ervaren?
+            Bekijk de beoordelingen en ervaringen op de reviewspagina.
+          </p>
+
+          <a
+            href="reviews"
+            class="btn">
+
+            Bekijk reviews
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Contact CTA -->
+
+    <section class="home-cta">
+
+      <div class="container">
+
+        <h2>
+          Kan ik u ergens mee helpen?
+        </h2>
+
+        <p>
+          Heeft u een ICT-probleem, wilt u advies
+          of heeft u een vraag over nieuwe apparatuur?
+          Neem gerust contact op.
+        </p>
+
+
+        <div class="home-cta-buttons">
+
+          <a
+            href="contact"
+            class="hero-button">
+
+            <ion-icon name="mail-outline"></ion-icon>
+
+            Neem contact op
+
+          </a>
+
+
+          <a
+            href="https://wa.me/31611379484"
+            class="hero-button secondary"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <ion-icon name="logo-whatsapp"></ion-icon>
+
+            WhatsApp
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- Footer -->
 
   <footer>
+
     <div class="container">
-      <p>&copy; 2025 TiesCT. Alle rechten voorbehouden.</p>
+
       <p>
-        Email: <a href="mailto:info@tiesct.nl">info@tiesct.nl</a> |
-        Telefoon: 0611379484 |
-        KvK: 42118080
+        &copy; 2026 TiesCT
       </p>
+
+
+      <p>
+
+        <a
+          href="mailto:info@tiesct.nl"
+          class="footer-contact">
+
+          info@tiesct.nl
+
+        </a>
+
+        |
+
+        <a
+          href="tel:+31611379484"
+          class="footer-contact">
+
+          06-11379484
+
+        </a>
+
+        |
+
+        KvK: 42118080
+
+      </p>
+
+
+      <p>
+
+        <a href="/contact">
+          Contact
+        </a>
+
+        |
+
+        <a href="/privacy">
+          Privacyverklaring
+        </a>
+
+        |
+
+        <a href="/terms-and-conditions">
+          Algemene voorwaarden
+        </a>
+
+      </p>
+
     </div>
+
   </footer>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+  <!-- Ionicons -->
+
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+  </script>
+
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+  </script>
+
+
 </body>
+
 </html>

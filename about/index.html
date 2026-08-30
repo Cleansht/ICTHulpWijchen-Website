@@ -1,92 +1,1061 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8">
-  <meta charset="UTF-8" />
-  <meta name="description" content="TiesCT, hulp met uw computer & telefoon">
-  <meta name="keywords" content="TiesCT, ICT hulp, Ties, computerhulp, laptop, ondersteuning">
+
+  <meta name="description"
+        content="Maak kennis met Ties Neeleman van TiesCT. Persoonlijke ICT-hulp, duidelijke uitleg en praktische oplossingen voor computers, laptops, telefoons en andere technologie.">
+
+  <meta name="keywords"
+        content="TiesCT, Ties Neeleman, ICT hulp, computerhulp, laptop, telefoon, Wijchen, ICT ondersteuning">
+
   <meta name="author" content="Ties Neeleman">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Over Mij - TiesCT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Over mij - TiesCT</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="../assets/style.css">
+
   <script type="text/javascript" src="../assets/script.js"></script>
+
+
+  <style>
+
+    /* =========================
+       OVER MIJ - TIESCT
+       ========================= */
+
+    .about-modern {
+      padding: 65px 0 60px;
+      background: #ffffff;
+    }
+
+
+    /* Intro */
+
+    .about-header {
+      max-width: 800px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .about-label {
+      display: inline-block;
+
+      padding: 8px 16px;
+      margin-bottom: 16px;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 30px;
+
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+
+    .about-header h1 {
+      margin-bottom: 15px;
+
+      color: #1c2833;
+
+      font-size: 2.8rem;
+    }
+
+    .about-header p {
+      max-width: 720px;
+      margin: 0 auto;
+
+      color: #444;
+
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+
+    /* Persoonlijke introductie */
+
+    .about-intro-card {
+      max-width: 1050px;
+
+      margin: 0 auto 45px;
+      padding: 42px;
+
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 38px;
+      align-items: center;
+
+      background: #1c2833;
+
+      border-radius: 16px;
+
+      box-shadow:
+        0 10px 25px rgba(28, 40, 51, 0.15);
+    }
+
+    .about-avatar {
+      width: 160px;
+      height: 160px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      background: #2980b9;
+      color: #ffffff;
+
+      border-radius: 50%;
+
+      text-align: center;
+    }
+
+    .about-avatar ion-icon {
+      font-size: 55px;
+      margin-bottom: 5px;
+    }
+
+    .about-avatar span {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .about-intro-text h2 {
+      display: block;
+
+      margin: 0 0 14px;
+
+      color: #ffffff;
+
+      font-size: 1.8rem;
+    }
+
+    .about-intro-text p {
+      margin: 0 0 15px;
+
+      color: #ffffff;
+
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .about-intro-text p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* Highlights */
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 24px;
+
+      max-width: 1050px;
+      margin: 0 auto 50px;
+    }
+
+    .about-highlight {
+      padding: 28px 25px;
+
+      background: #ffffff;
+
+      border: 2px solid #e4e9ed;
+      border-radius: 14px;
+
+      text-align: center;
+
+      box-shadow:
+        0 5px 15px rgba(28, 40, 51, 0.06);
+    }
+
+    .about-highlight-icon {
+      width: 60px;
+      height: 60px;
+
+      margin: 0 auto 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 50%;
+    }
+
+    .about-highlight-icon ion-icon {
+      font-size: 30px;
+    }
+
+    .about-highlight strong {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #1c2833;
+
+      font-size: 1.1rem;
+    }
+
+    .about-highlight span {
+      color: #555;
+
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+
+    /* Inhoudskaarten */
+
+    .about-content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 28px;
+
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .about-info-card {
+      padding: 35px 32px;
+
+      background: #f4f4f4;
+
+      border-radius: 14px;
+    }
+
+    .about-info-card.full-width {
+      grid-column: 1 / -1;
+
+      background: #ffffff;
+
+      border: 2px solid #e4e9ed;
+    }
+
+    .about-info-icon {
+      width: 55px;
+      height: 55px;
+
+      margin-bottom: 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #2980b9;
+      color: #ffffff;
+
+      border-radius: 50%;
+    }
+
+    .about-info-icon ion-icon {
+      font-size: 27px;
+    }
+
+    .about-info-card h2 {
+      display: block;
+
+      margin: 0 0 14px;
+
+      color: #1c2833;
+
+      font-size: 1.4rem;
+    }
+
+    .about-info-card p {
+      margin: 0;
+
+      color: #444;
+
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+
+    /* Werkwijze */
+
+    .about-approach {
+      max-width: 1050px;
+
+      margin: 50px auto 0;
+      padding: 40px 35px;
+
+      background: #f4f4f4;
+
+      border-radius: 14px;
+
+      text-align: center;
+    }
+
+    .about-approach > ion-icon {
+      margin-bottom: 10px;
+
+      color: #2980b9;
+
+      font-size: 40px;
+    }
+
+    .about-approach h2 {
+      display: block;
+
+      margin: 0 0 14px;
+
+      color: #1c2833;
+
+      font-size: 1.55rem;
+    }
+
+    .about-approach > p {
+      max-width: 760px;
+
+      margin: 0 auto 30px;
+
+      color: #444;
+
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .approach-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+
+      margin-bottom: 30px;
+    }
+
+    .approach-point {
+      padding: 22px 18px;
+
+      background: #ffffff;
+
+      border-radius: 10px;
+    }
+
+    .approach-point ion-icon {
+      color: #2980b9;
+
+      font-size: 27px;
+
+      margin-bottom: 8px;
+    }
+
+    .approach-point strong {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: #1c2833;
+
+      font-size: 1rem;
+    }
+
+    .approach-point span {
+      color: #555;
+
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+
+    /* CTA */
+
+    .about-cta {
+      max-width: 900px;
+
+      margin: 45px auto 0;
+
+      text-align: center;
+    }
+
+    .about-cta h2 {
+      display: block;
+
+      margin: 0 0 12px;
+
+      color: #1c2833;
+
+      font-size: 1.5rem;
+    }
+
+    .about-cta p {
+      max-width: 650px;
+
+      margin: 0 auto 22px;
+
+      color: #444;
+
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .about-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+    }
+
+    .about-button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 12px 22px;
+
+      background: #2980b9;
+      color: #ffffff;
+
+      border: 2px solid #2980b9;
+      border-radius: 6px;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .about-button:hover {
+      background: #1c5a8a;
+      border-color: #1c5a8a;
+
+      transform: translateY(-2px);
+    }
+
+    .about-button.secondary {
+      background: #ffffff;
+      color: #2980b9;
+    }
+
+    .about-button.secondary:hover {
+      background: #2980b9;
+      color: #ffffff;
+    }
+
+
+    /* Footer */
+
+    footer a.footer-contact {
+      color: #ffffff;
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    footer a.footer-contact:hover {
+      text-decoration: underline;
+    }
+
+
+    /* Tablet */
+
+    @media screen and (max-width: 900px) {
+
+      .about-intro-card {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+      }
+
+      .about-avatar {
+        margin: 0 auto;
+      }
+
+      .about-highlights {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+      }
+
+      .about-content-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+      }
+
+      .about-info-card.full-width {
+        grid-column: auto;
+      }
+
+      .approach-points {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    /* Mobiel */
+
+    @media screen and (max-width: 576px) {
+
+      .about-modern {
+        padding: 45px 18px;
+      }
+
+      .about-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .about-header p {
+        font-size: 1rem;
+      }
+
+      .about-intro-card {
+        padding: 30px 22px;
+      }
+
+      .about-avatar {
+        width: 135px;
+        height: 135px;
+      }
+
+      .about-intro-text h2 {
+        font-size: 1.55rem;
+      }
+
+      .about-info-card {
+        padding: 30px 22px;
+      }
+
+      .about-approach {
+        padding: 30px 20px;
+      }
+
+      .about-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-button {
+        width: 100%;
+        max-width: 280px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
 
+
+  <!-- Navigatie -->
+
   <header>
+
     <nav class="navbar">
+
       <div class="container">
+
         <div id="top">
+
           <div id="icons">
-            <ion-icon name="menu-outline" id="menu"></ion-icon>
-            <ion-icon name="close-outline" id="close" class="hidden"></ion-icon>
+
+            <ion-icon
+              name="menu-outline"
+              id="menu">
+            </ion-icon>
+
+            <ion-icon
+              name="close-outline"
+              id="close"
+              class="hidden">
+            </ion-icon>
+
           </div>
-          <a href="." class="logo">TiesCT</a>
+
+
+          <a href=".." class="logo">
+            TiesCT
+          </a>
+
         </div>
+
+
         <ul class="nav-links">
-          <li><a href="..">Home</a></li>
-          <li><a href="../about" class="active">Over mij</a></li>
-          <li><a href="../services">Diensten</a></li>
-          <li><a href="../pricing">Tarieven</a></li>
-          <li><a href="../contact">Contact</a></li>
-          <li><a href="../reviews">Reviews</a></li>
+
+          <li>
+            <a href="..">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="../about" class="active">
+              Over mij
+            </a>
+          </li>
+
+          <li>
+            <a href="../services">
+              Diensten
+            </a>
+          </li>
+
+          <li>
+            <a href="../pricing">
+              Tarieven
+            </a>
+          </li>
+
+          <li>
+            <a href="../contact">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a href="../reviews">
+              Reviews
+            </a>
+          </li>
+
         </ul>
+
       </div>
+
     </nav>
+
   </header>
-  
+
+
+
+  <!-- Over mij -->
+
   <main>
-    <section id="about" class="section about">
+
+    <section
+      id="about"
+      class="about-modern">
+
+
       <div class="container">
-        <h2>Over Mij</h2>
-        <p class="intro">
-          Hallo! Mijn naam is Ties, ik ben 21 jaar en ik heb een grote passie voor alles wat met ICT en technologie te maken heeft. 
-          Al van jongs af aan was ik bezig met computers bouwen, telefoons repareren en nieuwe technologie ontdekken. 
-          Inmiddels heb ik 5 jaar ervaring met het oplossen van ICT-problemen, hardware-reparaties en technische ondersteuning.
-        </p>
 
-        <div class="about-content">
-          <div class="about-text">
-            <h3>Mijn Ervaring & Opleiding</h3>
-            <p>
-              Ik heb mijn MBO-ICT niveau 4 diploma in Nijmegen behaald in 2024 en ben nu bezig met een HBO ICT-opleiding. 
-              In de praktijk heb ik ervaring opgedaan met het repareren van computers en telefoons, het oplossen van netwerkproblemen en 
-              het ondersteunen van klanten bij technische vragen.
-            </p>
 
-            <h3>Waarmee kan ik helpen?</h3>
-            <p>
-              Mijn expertise ligt in reparaties, netwerkbeheer, software-installaties en dataverlies herstel. 
-              Of het nu gaat om een trage laptop, een defecte smartphone of een ingewikkeld netwerkprobleem, ik bied persoonlijke en betrouwbare hulp. 
-              Neem gerust contact met me op voor meer informatie!
-            </p>
+        <!-- Intro -->
 
-            <h3>Waarom Kiezen Voor Mijn ICT Hulp?</h3>
-            <p>
-              Heeft u genoeg van ingewikkelde termen en technische praatjes? Bij mij krijgt u duidelijke en begrijpelijke uitleg, zonder poespas. 
-              Ik neem de tijd om uw probleem grondig te analyseren en een passende oplossing te bieden, zonder haast of stress. 
-              Mijn klanten waarderen mijn geduldige en rustige aanpak, waarbij ik altijd streef naar de best mogelijke service. 
-              Of u nu moeite heeft met een trage laptop, vastloopt bij een software-installatie of hulp nodig heeft met uw thuisnetwerk, 
-              ik zorg ervoor dat u zich geholpen voelt en de juiste oplossing krijgt. 
-            </p>
-          </div>
+        <div class="about-header">
+
+          <span class="about-label">
+            EVEN VOORSTELLEN
+          </span>
+
+          <h1>
+            Over mij
+          </h1>
+
+          <p>
+            Achter TiesCT staat geen groot callcenter of ingewikkelde organisatie,
+            maar gewoon één vast aanspreekpunt voor uw ICT.
+          </p>
+
         </div>
+
+
+
+        <!-- Persoonlijke introductie -->
+
+        <div class="about-intro-card">
+
+          <div class="about-avatar">
+
+            <ion-icon name="person-outline"></ion-icon>
+
+            <span>
+              Ties
+            </span>
+
+          </div>
+
+
+          <div class="about-intro-text">
+
+            <h2>
+              Hallo, ik ben Ties!
+            </h2>
+
+            <p>
+              Ik ben 21 jaar en al van jongs af aan geïnteresseerd in computers,
+              telefoons en alles wat met technologie te maken heeft.
+              Waar anderen een apparaat vooral gebruiken, wilde ik altijd weten
+              hoe het werkte, wat erin zat en hoe ik het kon verbeteren of repareren.
+            </p>
+
+            <p>
+              Inmiddels heb ik 5 jaar praktijkervaring met ICT-ondersteuning,
+              hardware, reparaties en het oplossen van technische problemen.
+              Met TiesCT help ik mensen graag op een persoonlijke en praktische manier,
+              zonder ingewikkeld technisch verhaal.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Highlights -->
+
+        <div class="about-highlights">
+
+
+          <div class="about-highlight">
+
+            <div class="about-highlight-icon">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <strong>
+              MBO-ICT niveau 4
+            </strong>
+
+            <span>
+              Diploma behaald in Nijmegen in 2024
+            </span>
+
+          </div>
+
+
+          <div class="about-highlight">
+
+            <div class="about-highlight-icon">
+              <ion-icon name="laptop-outline"></ion-icon>
+            </div>
+
+            <strong>
+              5 jaar ervaring
+            </strong>
+
+            <span>
+              Praktische ervaring met uiteenlopende ICT-vraagstukken
+            </span>
+
+          </div>
+
+
+          <div class="about-highlight">
+
+            <div class="about-highlight-icon">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <strong>
+              HBO ICT
+            </strong>
+
+            <span>
+              Momenteel verder aan het studeren binnen de ICT
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- Ervaring -->
+
+        <div class="about-content-grid">
+
+
+          <div class="about-info-card">
+
+            <div class="about-info-icon">
+              <ion-icon name="construct-outline"></ion-icon>
+            </div>
+
+            <h2>
+              Van hobby naar praktijk
+            </h2>
+
+            <p>
+              Mijn interesse begon met computers bouwen, telefoons repareren
+              en experimenteren met nieuwe technologie.
+              Door de jaren heen heb ik steeds meer praktijkervaring opgedaan
+              met computers, laptops, smartphones, netwerken, software
+              en technische ondersteuning.
+            </p>
+
+          </div>
+
+
+
+          <div class="about-info-card">
+
+            <div class="about-info-icon">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <h2>
+              Opleiding & ontwikkeling
+            </h2>
+
+            <p>
+              In 2024 heb ik mijn MBO-ICT niveau 4 diploma in Nijmegen behaald.
+              Inmiddels volg ik een HBO ICT-opleiding om mijn kennis verder uit te breiden.
+              ICT verandert voortdurend en juist dat maakt het voor mij interessant
+              om nieuwe technieken en oplossingen te blijven ontdekken.
+            </p>
+
+          </div>
+
+
+
+          <div class="about-info-card full-width">
+
+            <div class="about-info-icon">
+              <ion-icon name="people-outline"></ion-icon>
+            </div>
+
+            <h2>
+              ICT hoeft niet ingewikkeld te zijn
+            </h2>
+
+            <p>
+              Niet iedereen wil weten waarom een bepaald technisch probleem ontstaat
+              of hoe alle instellingen achter de schermen precies werken.
+              Vaak wilt u gewoon dat iets weer goed werkt.
+              Daarom probeer ik technische problemen altijd duidelijk uit te leggen
+              in gewone taal. Ik neem de tijd om te kijken wat er aan de hand is,
+              bespreek wat een goede oplossing is en zorg er waar mogelijk voor
+              dat alles daarna weer prettig en betrouwbaar werkt.
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- Werkwijze -->
+
+        <div class="about-approach">
+
+          <ion-icon name="chatbubbles-outline"></ion-icon>
+
+          <h2>
+            Hoe ik graag werk
+          </h2>
+
+          <p>
+            Voor mij gaat goede ICT-hulp niet alleen om het oplossen van een probleem.
+            Ik vind het minstens zo belangrijk dat u begrijpt wat er gebeurt
+            en met een goed gevoel verder kunt.
+          </p>
+
+
+          <div class="approach-points">
+
+
+            <div class="approach-point">
+
+              <ion-icon name="ear-outline"></ion-icon>
+
+              <strong>
+                Eerst luisteren
+              </strong>
+
+              <span>
+                Ik kijk eerst goed naar uw vraag en wat u echt nodig heeft.
+              </span>
+
+            </div>
+
+
+            <div class="approach-point">
+
+              <ion-icon name="chatbubble-outline"></ion-icon>
+
+              <strong>
+                Duidelijk uitleggen
+              </strong>
+
+              <span>
+                Geen onnodig vakjargon, maar uitleg die gewoon te begrijpen is.
+              </span>
+
+            </div>
+
+
+            <div class="approach-point">
+
+              <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+              <strong>
+                Netjes afronden
+              </strong>
+
+              <span>
+                Ik zorg dat alles zo goed mogelijk is ingesteld voordat ik klaar ben.
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+          <a
+            href="../services"
+            class="btn">
+
+            Bekijk mijn diensten
+
+          </a>
+
+        </div>
+
+
+
+        <!-- CTA -->
+
+        <div class="about-cta">
+
+          <h2>
+            Kan ik u ergens mee helpen?
+          </h2>
+
+          <p>
+            Heeft u een ICT-probleem, wilt u advies of zoekt u nieuwe apparatuur?
+            Neem gerust contact op. Dan kijken we samen wat een passende oplossing is.
+          </p>
+
+
+          <div class="about-buttons">
+
+            <a
+              href="../contact"
+              class="about-button">
+
+              <ion-icon name="mail-outline"></ion-icon>
+
+              Neem contact op
+
+            </a>
+
+
+            <a
+              href="https://wa.me/31611379484"
+              class="about-button secondary"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <ion-icon name="logo-whatsapp"></ion-icon>
+
+              WhatsApp
+
+            </a>
+
+          </div>
+
+        </div>
+
+
       </div>
+
     </section>
+
   </main>
-  
+
+
+
+  <!-- Footer -->
+
   <footer>
+
     <div class="container">
-      <p>&copy; 2025 TiesCT. Alle rechten voorbehouden.</p>
+
       <p>
-        Email: <a href="mailto:info@tiesct.nl">info@tiesct.nl</a> |
-        Telefoon: 0611379484 |
-        KvK: 42118080
+        &copy; 2026 TiesCT
       </p>
+
+
+      <p>
+
+        <a
+          href="mailto:info@tiesct.nl"
+          class="footer-contact">
+          info@tiesct.nl
+        </a>
+
+        |
+
+        <a
+          href="tel:+31611379484"
+          class="footer-contact">
+          06-11379484
+        </a>
+
+        |
+
+        KvK: 42118080
+
+      </p>
+
+
+      <p>
+
+        <a href="/contact">
+          Contact
+        </a>
+
+        |
+
+        <a href="/privacy">
+          Privacyverklaring
+        </a>
+
+        |
+
+        <a href="/terms-and-conditions">
+          Algemene voorwaarden
+        </a>
+
+      </p>
+
     </div>
+
   </footer>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+  <!-- Ionicons -->
+
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+  </script>
+
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+  </script>
+
+
 </body>
+
 </html>

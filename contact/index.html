@@ -1,83 +1,961 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="TiesCT, hulp met uw computer & telefoon">
-  <meta name="keywords" content="TiesCT, ICT hulp, Ties, computerhulp, laptop, ondersteuning">
+
+  <meta name="description"
+        content="Neem contact op met TiesCT voor persoonlijke ICT-hulp, computerondersteuning, reparaties, advies en nieuwe apparatuur in Wijchen en omgeving.">
+
+  <meta name="keywords"
+        content="TiesCT, ICT hulp, computerhulp, laptop, telefoon, reparatie, ondersteuning, Wijchen, ICT advies">
+
   <meta name="author" content="Ties Neeleman">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
   <title>Contact - TiesCT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="../assets/style.css">
+
   <script type="text/javascript" src="../assets/script.js"></script>
+
+
+  <style>
+
+    /* =========================
+       CONTACT - TIESCT
+       ========================= */
+
+    .contact-modern {
+      padding: 65px 0 60px;
+      background: #ffffff;
+    }
+
+
+    /* Intro */
+
+    .contact-header {
+      max-width: 780px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .contact-label {
+      display: inline-block;
+
+      padding: 8px 16px;
+      margin-bottom: 16px;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 30px;
+
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+
+    .contact-header h1 {
+      margin-bottom: 15px;
+
+      color: #1c2833;
+
+      font-size: 2.8rem;
+    }
+
+    .contact-header p {
+      max-width: 700px;
+      margin: 0 auto;
+
+      color: #444;
+
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+
+    /* Contactmogelijkheden */
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 24px;
+
+      max-width: 1050px;
+      margin: 0 auto 50px;
+    }
+
+    .contact-method {
+      position: relative;
+
+      padding: 32px 25px;
+
+      background: #ffffff;
+
+      border: 2px solid #e4e9ed;
+      border-radius: 14px;
+
+      text-align: center;
+
+      box-shadow:
+        0 5px 15px rgba(28, 40, 51, 0.07);
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .contact-method:hover {
+      transform: translateY(-5px);
+
+      border-color: #2980b9;
+
+      box-shadow:
+        0 12px 25px rgba(28, 40, 51, 0.12);
+    }
+
+    .contact-method-icon {
+      width: 65px;
+      height: 65px;
+
+      margin: 0 auto 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 50%;
+    }
+
+    .contact-method-icon ion-icon {
+      font-size: 31px;
+    }
+
+    .contact-method h2 {
+      display: block;
+
+      margin: 0 0 8px;
+
+      color: #1c2833;
+
+      font-size: 1.25rem;
+    }
+
+    .contact-method p {
+      margin: 0 0 15px;
+
+      color: #666;
+
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .contact-method a {
+      color: #2980b9;
+
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-method a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* Bedrijfsgegevens + bezoek */
+
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 28px;
+
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .contact-info-card {
+      padding: 35px 32px;
+
+      background: #f4f4f4;
+
+      border-radius: 14px;
+    }
+
+    .contact-info-card.dark {
+      background: #1c2833;
+      color: #ffffff;
+    }
+
+    .contact-info-icon {
+      width: 55px;
+      height: 55px;
+
+      margin-bottom: 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #2980b9;
+      color: #ffffff;
+
+      border-radius: 50%;
+    }
+
+    .contact-info-icon ion-icon {
+      font-size: 27px;
+    }
+
+    .contact-info-card h2 {
+      display: block;
+
+      margin: 0 0 18px;
+
+      color: #1c2833;
+
+      font-size: 1.4rem;
+    }
+
+    .contact-info-card.dark h2 {
+      color: #ffffff;
+    }
+
+    .contact-info-card p {
+      margin: 0 0 15px;
+
+      color: #444;
+
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .contact-info-card.dark p {
+      color: #ffffff;
+    }
+
+    .contact-info-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .company-data {
+      line-height: 1.8;
+    }
+
+    .company-data strong {
+      color: #1c2833;
+      font-size: 1.05rem;
+    }
+
+
+    /* Bereikbaarheid */
+
+    .availability-box {
+      max-width: 1050px;
+
+      margin: 28px auto 0;
+      padding: 25px 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+
+      background: #ffffff;
+
+      border: 2px solid #e4e9ed;
+      border-radius: 14px;
+    }
+
+    .availability-content {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .availability-icon {
+      min-width: 52px;
+      height: 52px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 50%;
+    }
+
+    .availability-icon ion-icon {
+      font-size: 26px;
+    }
+
+    .availability-text strong {
+      display: block;
+
+      margin-bottom: 4px;
+
+      color: #1c2833;
+
+      font-size: 1.05rem;
+    }
+
+    .availability-text span {
+      color: #555;
+
+      font-size: 0.98rem;
+    }
+
+    .availability-status {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 7px;
+
+      padding: 8px 14px;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 20px;
+
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .availability-status ion-icon {
+      font-size: 17px;
+    }
+
+
+    /* CTA */
+
+    .contact-cta-modern {
+      max-width: 950px;
+
+      margin: 45px auto 0;
+      padding: 38px 30px;
+
+      background: #f4f4f4;
+
+      border-radius: 14px;
+
+      text-align: center;
+    }
+
+    .contact-cta-modern > ion-icon {
+      margin-bottom: 10px;
+
+      color: #2980b9;
+
+      font-size: 38px;
+    }
+
+    .contact-cta-modern h2 {
+      display: block;
+
+      margin: 0 0 12px;
+
+      color: #1c2833;
+
+      font-size: 1.5rem;
+    }
+
+    .contact-cta-modern p {
+      max-width: 700px;
+
+      margin: 0 auto 24px;
+
+      color: #444;
+
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .contact-buttons {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+    }
+
+    .contact-button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 12px 22px;
+
+      background: #2980b9;
+      color: #ffffff;
+
+      border: 2px solid #2980b9;
+      border-radius: 6px;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .contact-button:hover {
+      background: #1c5a8a;
+      border-color: #1c5a8a;
+
+      transform: translateY(-2px);
+    }
+
+    .contact-button.secondary {
+      background: #ffffff;
+      color: #2980b9;
+    }
+
+    .contact-button.secondary:hover {
+      background: #2980b9;
+      color: #ffffff;
+    }
+
+
+    /* Footer */
+
+    footer a.footer-contact {
+      color: #ffffff;
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    footer a.footer-contact:hover {
+      text-decoration: underline;
+    }
+
+
+    /* Tablet */
+
+    @media screen and (max-width: 900px) {
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+      }
+
+      .contact-info-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+      }
+
+      .availability-box {
+        max-width: 650px;
+      }
+
+    }
+
+
+    /* Mobiel */
+
+    @media screen and (max-width: 576px) {
+
+      .contact-modern {
+        padding: 45px 18px;
+      }
+
+      .contact-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .contact-header p {
+        font-size: 1rem;
+      }
+
+      .contact-info-card {
+        padding: 30px 22px;
+      }
+
+      .availability-box {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 22px;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+      .contact-button {
+        width: 100%;
+        max-width: 270px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
 
+
+  <!-- Navigatie -->
+
   <header>
+
     <nav class="navbar">
+
       <div class="container">
+
         <div id="top">
+
           <div id="icons">
-            <ion-icon name="menu-outline" id="menu"></ion-icon>
-            <ion-icon name="close-outline" id="close" class="hidden"></ion-icon>
+
+            <ion-icon
+              name="menu-outline"
+              id="menu">
+            </ion-icon>
+
+            <ion-icon
+              name="close-outline"
+              id="close"
+              class="hidden">
+            </ion-icon>
+
           </div>
-          <a href="." class="logo">TiesCT</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="..">Home</a></li>
-          <li><a href="../about">Over mij</a></li>
-          <li><a href="../services">Diensten</a></li>
-          <li><a href="../pricing">Tarieven</a></li>
-          <li><a href="../contact" class="active">Contact</a></li>
-          <li><a href="../reviews">Reviews</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  
-  <main>
-    <section id="contact" class="section contact">
-      <div class="container contact-container">
-        <h2>Contact</h2>
-        <p>Heeft u een vraag of wilt u dat ik langskom om te helpen? Neem gerust contact op!<br>
-        Ik sta klaar om u te ondersteunen met al uw ICT-vragen.</p>
-        <div class="contact-details">
-          <p><strong><ion-icon name="mail-outline"></ion-icon> Email:</strong> 
-            <a href="mailto:info@tiesct.nl">info@tiesct.nl</a>
-          </p>
-          <p><strong><ion-icon name="call-outline"></ion-icon> Telefoon:</strong> 
-            <a href="tel:+31611379484">06-11379484</a>
-          </p>
-          <p><strong><ion-icon name="logo-whatsapp"></ion-icon> WhatsApp:</strong> 
-            <a href="https://wa.me/qr/DYJLD4CBLIAEA1" target="_blank">Stuur een bericht</a>
-          </p>
-        </div>
-        <div class="contact-info">
-          <h3>Bereikbaarheid:</h3>
-          <p><ion-icon name="calendar-outline"></ion-icon> Maandag t/m zondag: 09:00 - 22:00</p>
+
+
+          <a href=".." class="logo">
+            TiesCT
+          </a>
+
         </div>
 
-        <!-- WhatsApp-knop -->
-        <a href="https://wa.me/qr/DYJLD4CBLIAEA1" class="whatsapp-button" target="_blank">
-          <ion-icon name="logo-whatsapp"></ion-icon> WhatsApp bericht sturen
+
+        <ul class="nav-links">
+
+          <li>
+            <a href="..">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="../about">
+              Over mij
+            </a>
+          </li>
+
+          <li>
+            <a href="../services">
+              Diensten
+            </a>
+          </li>
+
+          <li>
+            <a href="../pricing">
+              Tarieven
+            </a>
+          </li>
+
+          <li>
+            <a href="../contact" class="active">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a href="../reviews">
+              Reviews
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- Contact -->
+
+  <main>
+
+    <section
+      id="contact"
+      class="contact-modern">
+
+
+      <div class="container">
+
+
+        <!-- Intro -->
+
+        <div class="contact-header">
+
+          <span class="contact-label">
+            PERSOONLIJK CONTACT
+          </span>
+
+          <h1>
+            Contact
+          </h1>
+
+          <p>
+            Heeft u een ICT-vraag, wilt u advies, een afspraak maken
+            of nieuwe apparatuur aanschaffen?
+            Neem gerust contact met mij op.
+          </p>
+
+        </div>
+
+
+
+        <!-- Contactmogelijkheden -->
+
+        <div class="contact-methods">
+
+
+          <!-- E-mail -->
+
+          <div class="contact-method">
+
+            <div class="contact-method-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <h2>
+              E-mail
+            </h2>
+
+            <p>
+              Stuur uw vraag of aanvraag per e-mail.
+            </p>
+
+            <a href="mailto:info@tiesct.nl">
+              info@tiesct.nl
+            </a>
+
+          </div>
+
+
+
+          <!-- Telefoon -->
+
+          <div class="contact-method">
+
+            <div class="contact-method-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <h2>
+              Telefoon
+            </h2>
+
+            <p>
+              Bel gerust voor overleg of een afspraak.
+            </p>
+
+            <a href="tel:+31611379484">
+              06-11379484
+            </a>
+
+          </div>
+
+
+
+          <!-- WhatsApp -->
+
+          <div class="contact-method">
+
+            <div class="contact-method-icon">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </div>
+
+            <h2>
+              WhatsApp
+            </h2>
+
+            <p>
+              Snel en gemakkelijk een bericht sturen.
+            </p>
+
+            <a
+              href="https://wa.me/31611379484"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Stuur een WhatsApp-bericht
+
+            </a>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- Bedrijfsgegevens + bezoek -->
+
+        <div class="contact-info-grid">
+
+
+          <!-- Bedrijfsgegevens -->
+
+          <div class="contact-info-card">
+
+            <div class="contact-info-icon">
+              <ion-icon name="business-outline"></ion-icon>
+            </div>
+
+            <h2>
+              Bedrijfsgegevens
+            </h2>
+
+            <p class="company-data">
+
+              <strong>TiesCT</strong><br>
+
+              Ties Neeleman<br>
+
+              Saltshof 1229<br>
+
+              6604 EC Wijchen<br><br>
+
+              KvK-nummer: 42118080<br>
+
+              Btw-id: NL005508611B50
+
+            </p>
+
+          </div>
+
+
+
+          <!-- Bezoek -->
+
+          <div class="contact-info-card dark">
+
+            <div class="contact-info-icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </div>
+
+            <h2>
+              Bezoek op afspraak
+            </h2>
+
+            <p>
+              Voor ICT-hulp kom ik doorgaans bij u thuis langs.
+              TiesCT heeft geen winkel of vrije inloop.
+            </p>
+
+            <p>
+              Wilt u apparatuur afgeven of ophalen, een reparatie bespreken
+              of persoonlijk advies krijgen?
+              Dan bent u op afspraak ook welkom bij TiesCT in Wijchen.
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- Bereikbaarheid -->
+
+        <div class="availability-box">
+
+          <div class="availability-content">
+
+            <div class="availability-icon">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="availability-text">
+
+              <strong>
+                Bereikbaarheid
+              </strong>
+
+              <span>
+                Maandag t/m zondag: 09:00 - 22:00
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="availability-status">
+
+            <ion-icon name="time-outline"></ion-icon>
+
+            Op afspraak
+
+          </div>
+
+        </div>
+
+
+
+        <!-- CTA -->
+
+        <div class="contact-cta-modern">
+
+          <ion-icon name="chatbubbles-outline"></ion-icon>
+
+          <h2>
+            Waar kan ik u mee helpen?
+          </h2>
+
+          <p>
+            Leg gerust kort uit waar u hulp bij nodig heeft.
+            Ik kijk graag met u mee en bespreek welke oplossing
+            het beste bij uw situatie past.
+          </p>
+
+
+          <div class="contact-buttons">
+
+            <a
+              href="mailto:info@tiesct.nl"
+              class="contact-button">
+
+              <ion-icon name="mail-outline"></ion-icon>
+
+              Stuur een e-mail
+
+            </a>
+
+
+            <a
+              href="https://wa.me/31611379484"
+              class="contact-button secondary"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <ion-icon name="logo-whatsapp"></ion-icon>
+
+              WhatsApp
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        &copy; 2026 TiesCT
+      </p>
+
+
+      <p>
+
+        <a
+          href="mailto:info@tiesct.nl"
+          class="footer-contact">
+
+          info@tiesct.nl
+
         </a>
 
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 TiesCT. Alle rechten voorbehouden.</p>
-      <p>
-        Email: <a href="mailto:info@tiesct.nl">info@tiesct.nl</a> |
-        Telefoon: <a href="tel:+31611379484">06-11379484</a>
-      </p>
-    </div>
-  </footer>  
+        |
 
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <a
+          href="tel:+31611379484"
+          class="footer-contact">
+
+          06-11379484
+
+        </a>
+
+        |
+
+        KvK: 42118080
+
+      </p>
+
+
+      <p>
+
+        <a href="/contact">
+          Contact
+        </a>
+
+        |
+
+        <a href="/privacy">
+          Privacyverklaring
+        </a>
+
+        |
+
+        <a href="/terms-and-conditions">
+          Algemene voorwaarden
+        </a>
+
+      </p>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- Ionicons -->
+
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+  </script>
+
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+  </script>
+
 
 </body>
-</html
+
+</html>

@@ -1,85 +1,910 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="TiesCT, hulp met uw computer & telefoon">
-  <meta name="keywords" content="TiesCT, ICT hulp, Ties, computerhulp, laptop, ondersteuning">
+
+  <meta name="description"
+        content="Lees ervaringen van klanten van TiesCT en bekijk de Google Reviews. Persoonlijke en betrouwbare ICT-hulp in Wijchen en omgeving.">
+
+  <meta name="keywords"
+        content="TiesCT, reviews, Google Reviews, ICT hulp, computerhulp, Wijchen, ervaringen">
+
   <meta name="author" content="Ties Neeleman">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TiesCT - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Reviews - TiesCT</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="../assets/style.css">
+
   <script type="text/javascript" src="../assets/script.js"></script>
+
+  <style>
+
+    /* =========================
+       REVIEWS - TIESCT
+       ========================= */
+
+    .reviews-modern {
+      padding: 65px 0 60px;
+      background: #ffffff;
+    }
+
+
+    /* Intro */
+
+    .reviews-header {
+      max-width: 780px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .reviews-label {
+      display: inline-block;
+      padding: 8px 16px;
+      margin-bottom: 16px;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 30px;
+
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+
+    .reviews-header h1 {
+      margin-bottom: 15px;
+      color: #1c2833;
+      font-size: 2.8rem;
+    }
+
+    .reviews-header p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #444;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+
+    /* Google Reviews */
+
+    .google-reviews-box {
+      max-width: 1000px;
+
+      margin: 0 auto 45px;
+      padding: 32px 35px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      background: #1c2833;
+      color: #ffffff;
+
+      border-radius: 16px;
+
+      box-shadow:
+        0 10px 25px rgba(28, 40, 51, 0.15);
+    }
+
+    .google-reviews-content {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .google-icon {
+      min-width: 70px;
+      height: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #2980b9;
+
+      border-radius: 50%;
+    }
+
+    .google-icon ion-icon {
+      color: #ffffff;
+      font-size: 35px;
+    }
+
+    .google-review-text h2 {
+      display: block;
+      margin: 0 0 7px;
+      color: #ffffff;
+      font-size: 1.45rem;
+    }
+
+    .google-review-text p {
+      max-width: 480px;
+      margin: 0;
+      color: #ffffff;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+
+    /* Google knoppen */
+
+    .google-review-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .google-review-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      padding: 11px 18px;
+
+      background: #2980b9;
+      color: #ffffff;
+
+      border: 2px solid #2980b9;
+      border-radius: 6px;
+
+      text-decoration: none;
+      font-weight: 700;
+
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .google-review-button:hover {
+      background: #1c5a8a;
+      border-color: #1c5a8a;
+      transform: translateY(-2px);
+    }
+
+    .google-review-button.secondary {
+      background: transparent;
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    .google-review-button.secondary:hover {
+      background: #ffffff;
+      color: #1c2833;
+    }
+
+
+    /* Review grid */
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      position: relative;
+
+      padding: 32px 28px 28px;
+
+      background: #ffffff;
+
+      border: 2px solid #e4e9ed;
+      border-radius: 14px;
+
+      box-shadow:
+        0 5px 15px rgba(28, 40, 51, 0.07);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      border-color: #2980b9;
+
+      box-shadow:
+        0 12px 25px rgba(28, 40, 51, 0.12);
+    }
+
+
+    /* Review icoon */
+
+    .review-quote-icon {
+      width: 52px;
+      height: 52px;
+
+      margin-bottom: 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #f4f4f4;
+      color: #2980b9;
+
+      border-radius: 50%;
+    }
+
+    .review-quote-icon ion-icon {
+      font-size: 26px;
+    }
+
+
+    /* Sterren */
+
+    .review-stars {
+      margin-bottom: 18px;
+
+      color: #2980b9;
+
+      font-size: 1.1rem;
+
+      letter-spacing: 2px;
+    }
+
+
+    /* Review tekst */
+
+    .review-text {
+      min-height: 150px;
+
+      margin-bottom: 22px;
+
+      color: #333;
+
+      font-size: 1rem;
+      line-height: 1.7;
+
+      font-style: italic;
+    }
+
+    .review-author {
+      padding-top: 18px;
+
+      border-top: 1px solid #e4e9ed;
+
+      color: #1c2833;
+
+      font-weight: 700;
+    }
+
+    .review-source {
+      display: block;
+
+      margin-top: 4px;
+
+      color: #777;
+
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+
+
+    /* Onderste CTA */
+
+    .review-cta {
+      max-width: 950px;
+
+      margin: 50px auto 0;
+      padding: 38px 30px;
+
+      background: #f4f4f4;
+
+      border-radius: 14px;
+
+      text-align: center;
+    }
+
+    .review-cta > ion-icon {
+      margin-bottom: 10px;
+      color: #2980b9;
+      font-size: 38px;
+    }
+
+    .review-cta h2 {
+      display: block;
+      margin: 0 0 12px;
+      color: #1c2833;
+      font-size: 1.5rem;
+    }
+
+    .review-cta p {
+      max-width: 700px;
+      margin: 0 auto 23px;
+      color: #444;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .review-cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .review-cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      padding: 12px 22px;
+
+      background: #2980b9;
+      color: #ffffff;
+
+      border: 2px solid #2980b9;
+      border-radius: 6px;
+
+      text-decoration: none;
+      font-weight: 700;
+
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .review-cta-button:hover {
+      background: #1c5a8a;
+      border-color: #1c5a8a;
+      transform: translateY(-2px);
+    }
+
+    .review-cta-button.secondary {
+      background: #ffffff;
+      color: #2980b9;
+    }
+
+    .review-cta-button.secondary:hover {
+      background: #2980b9;
+      color: #ffffff;
+    }
+
+
+    /* Footer contactlinks */
+
+    footer a.footer-contact {
+      color: #ffffff;
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    footer a.footer-contact:hover {
+      text-decoration: underline;
+    }
+
+
+    /* Tablet */
+
+    @media screen and (max-width: 900px) {
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+      }
+
+      .review-text {
+        min-height: auto;
+      }
+
+      .google-reviews-box {
+        flex-direction: column;
+        max-width: 650px;
+      }
+
+      .google-reviews-content {
+        width: 100%;
+      }
+
+      .google-review-buttons {
+        width: 100%;
+        justify-content: center;
+      }
+
+    }
+
+
+    /* Mobiel */
+
+    @media screen and (max-width: 576px) {
+
+      .reviews-modern {
+        padding: 45px 18px;
+      }
+
+      .reviews-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .reviews-header p {
+        font-size: 1rem;
+      }
+
+      .google-reviews-box {
+        padding: 28px 22px;
+      }
+
+      .google-reviews-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .google-review-buttons {
+        flex-direction: column;
+      }
+
+      .google-review-button {
+        width: 100%;
+      }
+
+      .review-card {
+        padding: 28px 24px;
+      }
+
+      .review-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .review-cta-button {
+        width: 100%;
+        max-width: 280px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
 
+
+  <!-- Navigatie -->
+
   <header>
+
     <nav class="navbar">
+
       <div class="container">
+
         <div id="top">
+
           <div id="icons">
-            <ion-icon name="menu-outline" id="menu"></ion-icon>
-            <ion-icon name="close-outline" id="close" class="hidden"></ion-icon>
+
+            <ion-icon
+              name="menu-outline"
+              id="menu">
+            </ion-icon>
+
+            <ion-icon
+              name="close-outline"
+              id="close"
+              class="hidden">
+            </ion-icon>
+
           </div>
-          <a href="." class="logo">TiesCT</a>
+
+
+          <a href=".." class="logo">
+            TiesCT
+          </a>
+
         </div>
+
+
         <ul class="nav-links">
-            <li><a href="..">Home</a></li>
-            <li><a href="../about">Over mij</a></li>
-            <li><a href="../services">Diensten</a></li>
-            <li><a href="../pricing">Tarieven</a></li>
-            <li><a href="../contact">Contact</a></li>
-            <li><a href="../reviews" class="active">Reviews</a></li>
+
+          <li>
+            <a href="..">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="../about">
+              Over mij
+            </a>
+          </li>
+
+          <li>
+            <a href="../services">
+              Diensten
+            </a>
+          </li>
+
+          <li>
+            <a href="../pricing">
+              Tarieven
+            </a>
+          </li>
+
+          <li>
+            <a href="../contact">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a href="../reviews" class="active">
+              Reviews
+            </a>
+          </li>
+
         </ul>
+
       </div>
+
     </nav>
+
   </header>
 
+
+
+  <!-- Reviews -->
+
   <main>
-    <section class="why-choose">
+
+    <section class="reviews-modern">
+
       <div class="container">
-        <h2>Wat zeggen klanten over TiesCT?</h2>
-        <div class="reasons-grid">
-            <div class="reason">
-                <div class="quote">
-                  <p>“Ties reageert snel en kan vaak direct langskomen.</p>
-                  <p>Hij werkt rustig, legt alles duidelijk uit en je merkt dat hij weet wat hij doet.</p>
-                  <p>Betrouwbare en prettige service!”</p>
-                </div>
-                <p>– Anita</p>
-              </div>              
-              <div class="reason">
-                <div class="quote">
-                  <p>“Ik dacht dat ik al mijn gegevens kwijt was toen mijn telefoon ermee stopte.</p>
-                  <p>Ties kwam snel, repareerde hem vakkundig en alles stond er nog op.</p>
-                  <p>Wat een opluchting en fijne service!”</p>
-                </div>
-                <p>– Annemarie </p>
-              </div>  
-              <div class="reason">
-                <div class="quote">
-                  <p>“Ik had problemen met mijn e-mail.</p>
-                  <p>Ties belde me en binnen 10 minuten was alles opgelost.</p>
-                  <p>Heel vriendelijk en professioneel!”</p>
-                </div>
-                <p>– Hans</p>
-          </div>
+
+
+        <!-- Intro -->
+
+        <div class="reviews-header">
+
+          <span class="reviews-label">
+            ERVARINGEN VAN KLANTEN
+          </span>
+
+          <h1>
+            Wat zeggen klanten over TiesCT?
+          </h1>
+
+          <p>
+            Bij TiesCT kunt u rekenen op persoonlijke service,
+            duidelijke uitleg en betrouwbare ICT-hulp.
+            Bekijk ervaringen van klanten of lees alle beoordelingen via Google.
+          </p>
+
         </div>
+
+
+
+        <!-- Google Reviews -->
+
+        <div class="google-reviews-box">
+
+          <div class="google-reviews-content">
+
+            <div class="google-icon">
+              <ion-icon name="star-outline"></ion-icon>
+            </div>
+
+            <div class="google-review-text">
+
+              <h2>
+                TiesCT op Google
+              </h2>
+
+              <p>
+                Bekijk alle beoordelingen van klanten via Google Maps
+                of deel zelf uw ervaring met TiesCT.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="google-review-buttons">
+
+            <a
+              href="https://www.google.com/maps/place/TiesCT/@51.8246469,5.7329542,17z/data=!4m8!3m7!1s0x47c7073a7fee04a7:0x537723e20d50888e!8m2!3d51.8246436!4d5.7355291!9m1!1b1!16s%2Fg%2F11yjnwq7rf?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+              class="google-review-button"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <ion-icon name="star-outline"></ion-icon>
+
+              Bekijk Google Reviews
+
+            </a>
+
+
+            <a
+              href="https://g.page/r/CY6IUA3iI3dTEAE/review"
+              class="google-review-button secondary"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <ion-icon name="create-outline"></ion-icon>
+
+              Schrijf een review
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Reviews -->
+
+        <div class="reviews-grid">
+
+
+          <!-- Anita -->
+
+          <article class="review-card">
+
+            <div class="review-quote-icon">
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            </div>
+
+            <div
+              class="review-stars"
+              aria-label="5 van 5 sterren">
+              ★★★★★
+            </div>
+
+            <div class="review-text">
+
+              “Ties reageert snel en kan vaak direct langskomen.
+              Hij werkt rustig, legt alles duidelijk uit en je merkt
+              dat hij weet wat hij doet.
+              Betrouwbare en prettige service!”
+
+            </div>
+
+            <div class="review-author">
+
+              Anita
+
+              <span class="review-source">
+                Klant van TiesCT
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- Annemarie -->
+
+          <article class="review-card">
+
+            <div class="review-quote-icon">
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            </div>
+
+            <div
+              class="review-stars"
+              aria-label="5 van 5 sterren">
+              ★★★★★
+            </div>
+
+            <div class="review-text">
+
+              “Ik dacht dat ik al mijn gegevens kwijt was toen mijn
+              telefoon ermee stopte. Ties kwam snel, repareerde hem
+              vakkundig en alles stond er nog op.
+              Wat een opluchting en fijne service!”
+
+            </div>
+
+            <div class="review-author">
+
+              Annemarie
+
+              <span class="review-source">
+                Klant van TiesCT
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- Hans -->
+
+          <article class="review-card">
+
+            <div class="review-quote-icon">
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            </div>
+
+            <div
+              class="review-stars"
+              aria-label="5 van 5 sterren">
+              ★★★★★
+            </div>
+
+            <div class="review-text">
+
+              “Ik had problemen met mijn e-mail.
+              Ties belde me en binnen 10 minuten was alles opgelost.
+              Heel vriendelijk en professioneel!”
+
+            </div>
+
+            <div class="review-author">
+
+              Hans
+
+              <span class="review-source">
+                Klant van TiesCT
+              </span>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+
+        <!-- Onderste gedeelte -->
+
+        <div class="review-cta">
+
+          <ion-icon name="heart-outline"></ion-icon>
+
+          <h2>
+            Tevreden over TiesCT?
+          </h2>
+
+          <p>
+            Een Google Review helpt andere mensen om een goede keuze te maken
+            en helpt TiesCT om verder te groeien.
+            Uw ervaring delen wordt daarom erg gewaardeerd.
+          </p>
+
+
+          <div class="review-cta-buttons">
+
+            <a
+              href="https://g.page/r/CY6IUA3iI3dTEAE/review"
+              class="review-cta-button"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <ion-icon name="star-outline"></ion-icon>
+
+              Schrijf een Google Review
+
+            </a>
+
+
+            <a
+              href="https://www.google.com/maps/place/TiesCT/@51.8246469,5.7329542,17z/data=!4m8!3m7!1s0x47c7073a7fee04a7:0x537723e20d50888e!8m2!3d51.8246436!4d5.7355291!9m1!1b1!16s%2Fg%2F11yjnwq7rf?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+              class="review-cta-button secondary"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <ion-icon name="open-outline"></ion-icon>
+
+              Bekijk alle reviews
+
+            </a>
+
+          </div>
+
+        </div>
+
+
       </div>
+
     </section>
+
   </main>
 
+
+
+  <!-- Footer -->
+
   <footer>
+
     <div class="container">
-      <p>&copy; 2025 TiesCT. Alle rechten voorbehouden.</p>
+
       <p>
-        Email: <a href="mailto:info@tiesct.nl">info@tiesct.nl</a> |
-        Telefoon: 0611379484 |
-        KvK: 42118080
+        &copy; 2026 TiesCT
       </p>
+
+
+      <p>
+
+        <a
+          href="mailto:info@tiesct.nl"
+          class="footer-contact">
+
+          info@tiesct.nl
+
+        </a>
+
+        |
+
+        <a
+          href="tel:+31611379484"
+          class="footer-contact">
+
+          06-11379484
+
+        </a>
+
+        |
+
+        KvK: 42118080
+
+      </p>
+
+
+      <p>
+
+        <a href="/contact">
+          Contact
+        </a>
+
+        |
+
+        <a href="/privacy">
+          Privacyverklaring
+        </a>
+
+        |
+
+        <a href="/terms-and-conditions">
+          Algemene voorwaarden
+        </a>
+
+      </p>
+
     </div>
+
   </footer>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+  <!-- Ionicons -->
+
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+  </script>
+
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+  </script>
+
+
 </body>
+
 </html>
